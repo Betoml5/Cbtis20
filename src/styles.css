@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+body{
+    background-color: #eeeeee;
+}
+
 .header{
     background-color: #303569;
     padding: 25px;
@@ -17,17 +21,20 @@
 }
 
 .header .logo{
+
     flex-basis: 40%;
 }
 
-.header .nav > ul{
+.header .nav{
+
+    /* flex */
+    
     display: flex;
-    flex-basis: 60%;
+    flex-basis: 30%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-
 
 
     list-style-type: none;
@@ -38,7 +45,57 @@
 
 
 .header .nav a{
+    /* flex */
+    justify-content: space-evenly;
+
+
     color: #fff;
     text-decoration: none;
-    
+    text-transform: uppercase;
+    transition: 300ms all ease;
+    font-family:sans-serif;
+    font-weight: 300;
+    font-family: 'Rubik', sans-serif;
+}
+
+.header .nav a:hover{
+
+    transform: scale(1.1);
+    color:rgba(255, 255, 255, 0.657) ;
+
+}
+
+.content{
+    display: flex;
+
+    margin: auto;
+    margin-top: 80px;
+    width: 90%;
+}
+
+.main{
+    width: 70%;
+    min-height: 600px;
+
+    border: 1px solid red;
+}
+
+.sidebar{
+    width: 30%;
+    min-height: 600px;
+
+    border: 1px solid black;
+}
+
+.sidebar .iniciarSesion{
+    margin: 20px;
+    border: 1px solid yellow;
+    min-height: 200px;
+}
+
+.sidebar .iniciarSesion h3{
+    font-family: 'Rubik', sans-serif;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-align: center;
 }
