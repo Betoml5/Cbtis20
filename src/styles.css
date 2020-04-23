@@ -81,21 +81,78 @@ body{
 }
 
 .sidebar{
+
+    background-color:#95c8c3 ;
+    border-radius: 20px;
+
     width: 30%;
     min-height: 600px;
 
-    border: 1px solid black;
+    
+}
+
+.sidebar .iniciarSesion input[type=text],
+input[type=password]{
+
+    
+
+
 }
 
 .sidebar .iniciarSesion{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin: 20px;
-    border: 1px solid yellow;
+    
     min-height: 200px;
 }
 
 .sidebar .iniciarSesion h3{
+    flex-basis: 100%;
+
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     margin-top: 10px;
     text-align: center;
+}
+
+.sidebar .iniciarSesion .usuario {
+    
+    text-align: center;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.sidebar .iniciarSesion .contra {
+    
+    text-align: center;
+
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.sidebar .iniciarSesion .input-send{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.sidebar .iniciarSesion .btn-iniciar{
+
+    width: 85%;
+
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    background-color: #1192ee;
+    color: #fff;
+}
+
+.sidebar .iniciarSesion .btn-iniciar:hover{
+    background-color: #007bdf;
 }

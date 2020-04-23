@@ -1,0 +1,35 @@
+<div class="iniciarSesion">
+
+    <h3>Iniciar sesion</h3>
+
+    <form>
+
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]=nombre_usuario placeholder="Nombre de usuario"
+                aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">***</span>
+            </div>
+            <input type="password" class="form-control" [(ngModel)]=contrasena placeholder="Contrasena"
+                aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-send">
+            <input type="submit" value="Iniciar sesion" class="btn-iniciar">
+        </div>
+        <br>
+        <p>
+            Aun no tienes cuenta.
+            <a href="#">Registrate</a> 
+        </p>
+
+    </form>
+
+
+
+</div>
