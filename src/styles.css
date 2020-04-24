@@ -74,19 +74,25 @@ body{
 }
 
 .main{
+
+    border-radius: 20px;
     width: 70%;
     min-height: 600px;
 
-    border: 1px solid red;
+    background-color: #4cbbb9;
+
+    margin-right: 10px;
+
+    
 }
 
 .sidebar{
 
-    background-color:#95c8c3 ;
+    background-color:#4cbbb9 ;
     border-radius: 20px;
 
     width: 30%;
-    min-height: 600px;
+    min-height: auto;
 
     
 }
