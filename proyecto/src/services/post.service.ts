@@ -4,7 +4,9 @@ import { Global } from './global';
 import { Post } from 'src/app/models/post';
 import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+  })
 export class PostService{
     public url: string;
 
@@ -18,10 +20,10 @@ export class PostService{
         return 'Probando el servicio de angular'
     }
 
-    savePost(post: Post): Observable<any>{
-        let params = JSON.stringify(post);
+    savePost(postObj: Post): Observable<any>{
+        let params = JSON.stringify(postObj);
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
-        return this._http.post(`${this.url}save-post`,params,{headers:headers})
+        return this._http.post(this.url+'save-post', params,{headers: headers});
     }
 }

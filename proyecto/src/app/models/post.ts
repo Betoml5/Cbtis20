@@ -3,9 +3,10 @@ export class Post {
     constructor(
         public _id: string,
         public title: string,
-        public date: Date,
+        public content: string,
+        public date: number,
         public category:string,
-        public author: string 
+        public author: string ,
     ) {}
 
     

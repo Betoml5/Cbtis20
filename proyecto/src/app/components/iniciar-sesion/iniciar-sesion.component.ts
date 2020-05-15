@@ -8,8 +8,7 @@ import { Usuario } from "../../usuario";
 })
 export class IniciarSesionComponent implements OnInit {
 
-  nombre_usuario: string;
-  contrasena: string;
+
 
 
   constructor() {}

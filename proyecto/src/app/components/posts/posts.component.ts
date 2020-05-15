@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Post } from '../../post';
+
 
 @Component({
   selector: 'app-posts',
@@ -8,7 +8,7 @@ import { Post } from '../../post';
 })
 export class PostsComponent implements OnInit {
 
-  post: Post;
+  
 
   constructor() { }
 
