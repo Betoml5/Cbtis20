@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
   })
 export class PostService{
     public url: string;
+    public posts: Post[] = [];
 
     constructor(
         private _http: HttpClient
@@ -25,5 +26,12 @@ export class PostService{
         let headers = new HttpHeaders().set('Content-Type', 'application/json');
 
         return this._http.post(this.url+'save-post', params,{headers: headers});
+    }
+
+    getPosts(): Observable<any>{
+        
+        return this._http.get(this.url+'posts')
+
+        
     }
 }
