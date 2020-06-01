@@ -16,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'carreras', component: CarrerasComponent},
   { path: 'contacto', component: ContactoComponent},
   { path: 'crear-post', component:CreatePostComponent},
+  //Tengo que crear un path que reciba id como parametro.
 
 
 ];

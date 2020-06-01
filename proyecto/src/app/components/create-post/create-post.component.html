@@ -1,8 +1,7 @@
 <div class="container">
-    <h2>{{title_post}}</h2>
 
     <div class="message success" *ngIf="status === 'success'">
-        El post se ha publicado correctamente;
+        El post se ha publicado correctamente <a routerLink="post/{{savePost.id}}">Ver post</a>
     </div>
 
     <div *ngIf="status === 'failed'" class="message failed">
@@ -10,45 +9,51 @@
     </div>
 
     <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
+        <div class="form_inputs">
+            <div class="form_inputs-2">
+                <h2>Titulo de post</h2>
+                <input tabindex="2" type="text" name="title" #title="ngModel" [(ngModel)]="post.title" required>
+                <br>
+                <span class="form_error" *ngIf="title.touched && title.invalid">
+                    El titulo es obligatorio
+                </span>
 
-        <p>
-            <label for="title">Titulo del post</label>
-            <input type="text" name="title" #title="ngModel" [(ngModel)]="post.title" required>
-            <span class="form_error" *ngIf="title.touched && title.invalid">
-                El titulo es obligatorio
-            </span>
-        </p>
 
 
-        <p>
+                <h2>Categoria</h2>
+                <input tabindex="3" type="text" name="category" #category="ngModel" [(ngModel)]="post.category" required>
+                <br>
+                <span class="form_error" *ngIf="category.touched && category.invalid">
+                    La categoria es obligatoria
+                </span>
 
-            <label for="content">Contenido</label>
-            <textarea name="content" #content="ngModel" [(ngModel)]="post.content" required></textarea>
-            <span class="form_error" *ngIf="content.touched && content.invalid">
-                El contenido es obligatorio
-            </span>
 
-        </p>
 
-        <p>
-            <label for="category">Categoría</label>
-            <input type="text" name="category" #category="ngModel" [(ngModel)]="post.category" required>
-            <span class="form_error" *ngIf="category.touched && category.invalid">
-                La categoria es obligatoria
-            </span>
-        </p>
+                <h2>Autor</h2>
 
-        
-        <p>
-            <label for="author">Autor</label>
-            <input type="text" name="author" #author="ngModel" [(ngModel)]="post.author" required>
-            <span class="form_error" *ngIf="author.invalid && (author.touched || author.dirty)">
-                El autor es obligatorio
-            </span>
-        </p>
+                <input tabindex="4" type="text" name="author" #author="ngModel" [(ngModel)]="post.author" required>
+                <br>
+                <span class="form_error" *ngIf="author.invalid && (author.touched || author.dirty)">
+                    El autor es obligatorio
+                </span>
 
-        <input type="submit" value="Publicar"  [disabled]="!postForm.form.valid">
-       
+
+                <input tabindex="5" type="submit" value="Publicar" [disabled]="!postForm.form.valid">
+            </div>
+
+            <div class="form_inputs-1">
+
+                <h2>Contenido</h2>
+                <br>
+                <textarea tabindex="1" name="content" #content="ngModel" [(ngModel)]="post.content" required></textarea>
+                <br>
+                <span class="form_error" *ngIf="content.touched && content.invalid">
+                    El contenido es obligatorio
+                </span>
+
+            </div>
+        </div>
+
 
     </form>
 

@@ -1,0 +1,14 @@
+.posts-container{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: #ccc;
+}
+
+.post{
+    height: 300px;
+    border-radius: 8px;
+    background-color: honeydew;
+}

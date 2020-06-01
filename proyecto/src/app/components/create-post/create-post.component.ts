@@ -39,6 +39,7 @@ export class CreatePostComponent implements OnInit {
         }
       },
       (error) => {
+        this.status = 'failed'
         console.log(<any>error);
       }
     );
