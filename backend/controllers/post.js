@@ -54,7 +54,7 @@ const controller = {
             .send({ message: "Error al devolver los datos" });
 
         if (!posts)
-          return res.status(404).send({ message: "No hay post por mostrar" });
+          return res.status(404).send({ message: "No hay posts por mostrar" });
 
         return res.status(200).send({ posts });
       });
