@@ -4,11 +4,24 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
-    background-color: #ccc;
+    
 }
 
 .post{
-    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     border-radius: 8px;
     background-color: honeydew;
+    padding: 60px;
+    box-shadow: 6px 7px 16px rgba(0,0,0,0.25);
+}
+
+.post-content{
+    max-height: 140px;
+    overflow: hidden;
+}
+
+.post-date{
+    align-self: flex-end;
 }

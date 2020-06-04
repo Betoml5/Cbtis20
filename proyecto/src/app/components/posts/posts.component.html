@@ -1,20 +1,9 @@
 <div class="posts-container">
-
     <div class="post" *ngFor="let post of posts">
-
-
-        <h2>{{post.title}}</h2>
-
-        
-        <p>{{post.author}}</p>
-        <p>{{post.date}}</p>
-        <p>{{post.category}}</p>
-
-
-        <p>{{post.content}}</p>
-            
-
-        
+        <h2>{{post.title}}</h2>     
+        <p class="post-category">{{post.category}}</p>
+        <p class="post-content">{{post.content}}</p>
+        <p class="post-author">Autor: {{post.author}}</p>
+        <p class="post-date">{{post.date}}</p>
     </div>
-
 </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Post } from "../../models/post";
 import { PostService } from "../../../services/post.service";
 import { Global } from "src/services/global";
+import Swal from 'sweetalert2'
 
 @Component({
   selector: "app-create-post",
@@ -20,22 +21,37 @@ export class CreatePostComponent implements OnInit {
     
   ) {
     this.title_post = "SUBIR POST";
-    this.post = new Post('','','',2019,'','');
+    this.post = new Post('','','','','','');
   }
 
   ngOnInit() {}
 
   onSubmit(form) {
     //Guardar datos
+
+
     this._postService.savePost(this.post)
     .subscribe(
       (response) => {
-        if (response.post) {
+        console.log(response.post.content.length)
+        if (response.post.content.length > 270) {
           this.savePost = response.post;
-            this.status = "success";
+          Swal.fire({
+            title: 'Enviado!',
+            text: 'Tu post se ha publicado correctamente',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
             form.reset();
         } else {
-          this.status = "failed";
+          this.savePost = null;
+          Swal.fire({
+            title: 'Error!',
+            text: 'No se ha podido publicar tu post',
+            icon: 'error',
+            confirmButtonText: 'Intentarlo de nuevo'
+          })
+          form.reset();
         }
       },
       (error) => {

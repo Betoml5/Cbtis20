@@ -4,7 +4,7 @@ export class Post {
         public _id: string,
         public title: string,
         public content: string,
-        public date: number,
+        public date: string,
         public category:string,
         public author: string ,
     ) {}
