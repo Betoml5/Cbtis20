@@ -10,7 +10,9 @@ mongoose.connect('mongodb://localhost:27017/posts')
 
         	// Creacion del servidor
         	app.listen(port, () => {
-        		console.log("Servidor corriendo correctamente en la url: localhost:3700");
+				console.log("Servidor corriendo correctamente en la url: localhost:3700");
+				
+				
         	});
 
         })

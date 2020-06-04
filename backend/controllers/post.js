@@ -7,13 +7,15 @@ const controller = {
     });
   },
 
-  savePost: function (req, res) {
+  savePost: async function (req, res) {
     const post = new Post();
+    const DateNow =  await new Date();
+    const formattedDate = `${DateNow.getDay()}/${DateNow.getMonth()}/${DateNow.getFullYear()}`
 
     const params = req.body;
     post.title = params.title;
     post.content = params.content;
-    post.date = params.date;
+    post.date = formattedDate;
     post.category = params.category;
     post.author = params.author;
 

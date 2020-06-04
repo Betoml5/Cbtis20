@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const Post = new Schema({
     title: String,
     content: String,
-    date: Number,
+    date: String,
     category: String,
     author: String,
    
