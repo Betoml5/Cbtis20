@@ -9,13 +9,13 @@ const controller = {
 
   savePost: async function (req, res) {
     const post = new Post();
-    const DateNow =  await new Date();
-    const formattedDate = `${DateNow.getDay()}/${DateNow.getMonth()}/${DateNow.getFullYear()}`
+
+    //const formattedDate = `${DateNow.getDay()}/${DateNow.getMonth()}/${DateNow.getFullYear()}`
 
     const params = req.body;
     post.title = params.title;
     post.content = params.content;
-    post.date = formattedDate;
+    post.date = params.date;
     post.category = params.category;
     post.author = params.author;
 
@@ -31,18 +31,16 @@ const controller = {
   },
 
   getPost: function (req, res) {
-    const postId = req.params.postId;
+    const postId = req.params.id;
 
-    if (postId === null)
-      return res.status(404).send({ message: "El post no existe" });
+    if (postId == null) return res.status(404).send({ message: "El post no existe" });
 
     Post.findById(postId, (err, post) => {
-      if (err)
-        return res.status(500).send({ message: "Error al devovler los datos" });
+      if (err) return res.status(500).send({ message: "Error al devovler los datos" });
 
-      return res.status(200).send({
-        post,
-      });
+      if (!post) return res.status(404).send({message: 'El proyecto no existe'})
+
+      return res.status(200).send({post});
     });
   },
 

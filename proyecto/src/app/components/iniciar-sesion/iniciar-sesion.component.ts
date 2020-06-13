@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Usuario } from "../../usuario";
+import { User } from '../../models/userTypes';
 
 @Component({
   selector: "app-iniciar-sesion",
@@ -8,10 +8,17 @@ import { Usuario } from "../../usuario";
 })
 export class IniciarSesionComponent implements OnInit {
 
+  public user:User;
 
+  constructor() {
+    this.user = new User("","","","");
+  }
 
-
-  constructor() {}
+  
 
   ngOnInit() {}
+
+  onSumit(){
+    
+  }
 }

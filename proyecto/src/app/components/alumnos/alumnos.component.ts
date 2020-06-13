@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.component';
+
 
 @Component({
   selector: 'app-alumnos',
