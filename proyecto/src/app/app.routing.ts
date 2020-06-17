@@ -9,6 +9,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { CarrerasComponent } from './components/carreras/carreras.component';
 import {CreatePostComponent} from './components/create-post/create-post.component';
 import { PostComponent } from './components/post/post.component'
+import { CuentaComponent } from './components/cuenta/cuenta.component';
 
 
 const appRoutes: Routes = [
@@ -18,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'contacto', component: ContactoComponent},
   { path: 'crear-post', component:CreatePostComponent},
   { path: 'post/:id', component: PostComponent },
+  { path: 'user/:user-name', component: CuentaComponent}
   //Tengo que crear un path que reciba id como parametro.
 
 

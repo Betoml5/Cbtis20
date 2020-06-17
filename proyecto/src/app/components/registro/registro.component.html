@@ -1,11 +1,15 @@
 <div class="login_container" *ngIf="!userLocal">
 
     <div class="login_container-form">
-        <h2>Iniciar Sesion!</h2>
-        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <h2>Registrate!</h2>
+        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
             <div class="login_container-form-input">
                 <input name="userName" #userName="ngModel" [(ngModel)]="user.userName" type="text"
                     placeholder="Nombre de usuario" required>
+            </div>
+
+            <div class="login_container-form-input">
+                <input name="email" #email="ngModel" [(ngModel)]="user.email" type="email" placeholder="Email" required>
             </div>
 
             <div class="login_container-form-input">
@@ -13,8 +17,13 @@
                     placeholder="Contraseña" required>
             </div>
 
+            <div class="login_container-form-input">
+                <input name="userType" #userType="ngModel" [(ngModel)]="user.type" type="text"
+                    placeholder="Tipo de usuario" required>
+            </div>
+
             <div class="login_container-form-input-submit">
-                <input type="submit" value="Iniciar sesion">
+                <input type="submit" value="Registrarme">
             </div>
         </form>
     </div>

@@ -15,8 +15,9 @@ const multipartMiddleware = multipart({uploadDir: './uploads'})
     router.get('/posts', PostController.getPosts)
 
     //USERS
-    router.post('/register', UserController.createUser)
-    router.post('/login', UserController.login)
+    router.post('/register', UserController.createUser);
+    router.post('/login', UserController.login);
+    router.get('/user/:id?', UserController.getUser);
 
 
 

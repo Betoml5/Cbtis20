@@ -1,0 +1,56 @@
+.login_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 500px;
+    
+}
+
+.login_container-form{
+   
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.25);
+    
+}
+
+.login_container-form input[type="text"],
+[type="email"], [type="password"]{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+.login_container-form input[type="text"],
+[type="email"], [type="password"]:focus{
+    border: none;
+    border-bottom: 1px solid red;
+    outline: none;
+}
+
+.login_container-form input[type="submit"]{
+    border: none;
+    padding: 12px;
+    width: 80%;
+    border-radius: 6px;
+    
+}
+
+.login_container-form-input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login_container-form-input-submit{
+    text-align: center;
+}
+
+
+

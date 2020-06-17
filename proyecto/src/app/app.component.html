@@ -1,31 +1,12 @@
-<header class="header">
-    <div class="logo">
-        <a [routerLink]="['/']">
-            <img src="../assets/static/logo.png" alt="">
-        </a>
-    </div>
-
-    <nav class="nav">
-        <a [routerLink]="['/']" [routerLinkActive]="['actived']" [routerLinkActiveOptions]="{exact: true}">
-            <span class="icon"><img src="../assets/static/browser.png" alt="">
-            </span>
-            Inicio
-        </a>
-        <a [routerLink]="['/alumnos']" [routerLinkActive]="['actived']" [routerLinkActiveOptions]="{exact: true}"> <span
-                class="icon"><img src="../assets/static/student.png" alt=""></span> Alumnos</a>
-        <a [routerLink]="['/carreras']" [routerLinkActive]="['actived']" [routerLinkActiveOptions]="{exact: true}">
-            <span class="icon"><img src="../assets/static/career.png" alt=""></span> Carreras</a>
-        <a [routerLink]="['/crear-post']" [routerLinkActive]="['actived']" [routerLinkActiveOptions]="{exact: true}">
-            <span class="icon"><img src="../assets/static/blog.png" alt=""></span> Crear post</a>
-        <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']" [routerLinkActiveOptions]="{exact: true}">
-            <span class="icon"><img src="../assets/static/contacts.png" alt=""></span> Contacto</a>
-
-    </nav>
-</header>
 
 
-<router-outlet></router-outlet>
+<router-outlet>
+    <app-header></app-header>
+</router-outlet>
 
+
+
+<!--PASAR A GLOBAL-->
 <footer class="footer">
 
 </footer>

@@ -15,6 +15,9 @@ import { GruposComponent } from "./components/grupos/grupos.component";
 import { PostsComponent } from "./components/posts/posts.component";
 import { CreatePostComponent } from "./components/create-post/create-post.component";
 import { PostComponent } from "./components/post/post.component";
+import { RegistroComponent } from './components/registro/registro.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CuentaComponent } from './components/cuenta/cuenta.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { PostComponent } from "./components/post/post.component";
     PostsComponent,
     CreatePostComponent,
     PostComponent,
+    RegistroComponent,
+    HeaderComponent,
+    CuentaComponent,
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [appRoutingProviders],

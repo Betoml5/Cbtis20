@@ -1,5 +1,5 @@
 const User = require("../models/user");
-const post = require("../models/post");
+const bcrypt = require("bcrypt");
 
 const controller = {
   test: async function (req, res) {
@@ -48,14 +48,42 @@ const controller = {
       if (!user) {
         return response
           .status(400)
-          .send({ message: "The username does not exist" });
+          .send({ message: "El usuario no existe", status: "failed" });
       }
 
-      res.send({ message: "The username and password are correct!" });
+      res.status(200).send({
+        message: "El usuario y la contraseña son correctos",
+        state: "success",
+        user: user,
+      });
     } catch (err) {
-      res
-        .status(500)
-        .send({ message: "El usuario o contraseña son incorrectos" });
+      res.status(500).send({
+        message: "El usuario o contraseña son incorrectos",
+        state: "failed",
+      });
+    }
+  },
+
+  getUser: async function (req, res) {
+    try {
+      const userId = req.params.id;
+
+      if (userId == null)
+        return res.status(404).send({ message: "El usuario no existe" });
+
+      User.findById(userId, (err, user) => {
+        if (err)
+          return res
+            .status(500)
+            .send({ message: "Error al devovler los datos" });
+
+        if (!user)
+          return res.status(404).send({ message: "El usuario no existe" });
+
+        return res.status(200).send({ user });
+      });
+    } catch (error) {
+      res.status(500).send({ message: "Error al intentar buscar el usuario" });
     }
   },
 };

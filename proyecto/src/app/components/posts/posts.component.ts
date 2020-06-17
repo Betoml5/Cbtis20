@@ -22,7 +22,6 @@ export class PostsComponent implements OnInit {
           this.posts.push(response.posts[i]);
         }
 
-        console.log(this.posts);
       },
       (error) => {
         console.log("Ha ocurrido un error: " + error);

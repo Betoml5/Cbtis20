@@ -3,11 +3,13 @@ export class User{
         public _id: string,
         public userName: string,
         public password: string,
-        public userType: string,
+        public type: string,
+        public email: string,
+        public singupDay: any
     ) {}
 }
 
-export class admin{
+export class Admin{
     constructor(
         public _id:string,
         public userName: string,
