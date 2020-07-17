@@ -10,6 +10,8 @@ import { CarrerasComponent } from './components/carreras/carreras.component';
 import {CreatePostComponent} from './components/create-post/create-post.component';
 import { PostComponent } from './components/post/post.component'
 import { CuentaComponent } from './components/cuenta/cuenta.component';
+import { RegistroComponent } from './components/registro/registro.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
 
 
 const appRoutes: Routes = [
@@ -19,7 +21,9 @@ const appRoutes: Routes = [
   { path: 'contacto', component: ContactoComponent},
   { path: 'crear-post', component:CreatePostComponent},
   { path: 'post/:id', component: PostComponent },
-  { path: 'user/:user-name', component: CuentaComponent}
+  { path: 'user/:user-name', component: CuentaComponent},
+  { path: 'register', component: RegistroComponent},
+  { path: 'login', component: IniciarSesionComponent}
   //Tengo que crear un path que reciba id como parametro.
 
 

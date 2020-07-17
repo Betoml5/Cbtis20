@@ -1,4 +1,4 @@
-<div class="login_container" *ngIf="!userLocal">
+<div class="login_container" id="register-container">
 
     <div class="login_container-form">
         <h2>Registrate!</h2>
@@ -20,6 +20,10 @@
             <div class="login_container-form-input">
                 <input name="userType" #userType="ngModel" [(ngModel)]="user.type" type="text"
                     placeholder="Tipo de usuario" required>
+            </div>
+
+            <div class="login_container-form-login">
+                <span><a [routerLink]="['/login']">Ingresa!</a></span>
             </div>
 
             <div class="login_container-form-input-submit">

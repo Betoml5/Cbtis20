@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.component';
 
 
@@ -9,9 +9,13 @@ import { IniciarSesionComponent } from '../iniciar-sesion/iniciar-sesion.compone
 })
 export class AlumnosComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
   }
+
+  
 
 }

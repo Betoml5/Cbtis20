@@ -14,7 +14,7 @@ export class CuentaComponent implements OnInit {
     private _route: ActivatedRoute,
     private _userService: UserService
   ) {
-    this.userLocal = JSON.parse(localStorage.getItem("user"));
+    
   }
 
   ngOnInit(): void {

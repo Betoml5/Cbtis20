@@ -2,8 +2,8 @@ import { Component, OnInit, Output } from "@angular/core";
 import { User } from "../../models/userTypes";
 import { UserService } from "../../services/user.service";
 import * as moment from "moment";
-import { routing } from "src/app/app.routing";
 import { Router } from "@angular/router";
+
 
 @Component({
   selector: "app-iniciar-sesion",
@@ -11,13 +11,15 @@ import { Router } from "@angular/router";
   styleUrls: ["./iniciar-sesion.component.css"],
 })
 export class IniciarSesionComponent implements OnInit {
+
+  @Output() style;
+
   public user: User;
   public state: string;
   public userLocal: any;
 
   constructor(private _userService: UserService, private _router: Router) {
     this.user = new User("", "", "", "", "", "");
-    this.userLocal = JSON.parse(localStorage.getItem("user"));
   }
 
   ngOnInit() {}
@@ -40,4 +42,11 @@ export class IniciarSesionComponent implements OnInit {
       }
     );
   }
+
+  login(){
+    const container = document.querySelector('#login-container');
+    container.classList.toggle('removed');
+  }
+
+  
 }

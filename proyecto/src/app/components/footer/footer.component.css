@@ -1,0 +1,27 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    padding: 40px;
+    background-color: #000;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer p a {
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.footer__item{
+    
+}
+
+.footer__item img{
+    width: 100px;
+    height: 100px;
+}

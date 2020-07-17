@@ -18,6 +18,7 @@ import { PostComponent } from "./components/post/post.component";
 import { RegistroComponent } from './components/registro/registro.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CuentaComponent } from './components/cuenta/cuenta.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CuentaComponent } from './components/cuenta/cuenta.component';
     RegistroComponent,
     HeaderComponent,
     CuentaComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, routing, FormsModule, HttpClientModule],
   providers: [appRoutingProviders],

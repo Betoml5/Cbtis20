@@ -1,0 +1,13 @@
+.alumnos-container{
+    display: flex;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+app-registro{
+    display: none;
+}

@@ -69,6 +69,15 @@ body {
 }
 
 
+@media (max-width: 1440px){
+  .header .nav{
+    flex-basis: 60%;
+  }
+
+
+}
+
+
 
 
 

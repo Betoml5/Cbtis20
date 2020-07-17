@@ -18,7 +18,6 @@ export class RegistroComponent implements OnInit {
 
   constructor(private _userService: UserService) { 
     this.user = new User("", "", "", "","", this.today);
-    this.userLocal = JSON.parse(localStorage.getItem("user"));
    }
 
   ngOnInit(): void {
@@ -49,5 +48,7 @@ export class RegistroComponent implements OnInit {
       }
     );
   }
+
+
 
 }

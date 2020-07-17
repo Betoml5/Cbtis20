@@ -1,4 +1,4 @@
-<div class="login_container" *ngIf="!userLocal">
+<div class="login_container" id="login-container">
 
     <div class="login_container-form">
         <h2>Iniciar Sesion!</h2>
@@ -11,6 +11,10 @@
             <div class="login_container-form-input">
                 <input name="password" #password="ngModel" [(ngModel)]="user.password" type="password"
                     placeholder="Contraseña" required>
+            </div>
+
+            <div class="login_container-form-register">
+                <p>¿Aun no tienes cuenta? <br> <span class="register-link"> <a [routerLink]="['/register']">Registrate!</a></span></p>
             </div>
 
             <div class="login_container-form-input-submit">
