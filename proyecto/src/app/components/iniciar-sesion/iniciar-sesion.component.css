@@ -23,25 +23,29 @@
     
 }
 
-.login_container-form input[type="text"],
-[type="email"], [type="password"]{
+.login_container-form input[type="text"]
+,[type="password"]{
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1.5px solid #ccc;
     outline: none;
+    transition: 300ms all ease;
+    font-size: 20px;
 }
 
-/* .login_container-form input[type="text"],
-[type="email"], [type="password"]:focus{
-    border: none;
-    border-bottom: 1px solid red;
-    outline: none;
-} */
+.login_container-form input[type="text"]:focus {
+    border-bottom: 1.5px solid #303569;
+} 
+
+.login_container-form input[type="password"]:focus {
+    border-bottom: 1.5px solid #303569;
+} 
 
 .login_container-form input[type="submit"]{
     border: none;
     padding: 12px;
     width: 80%;
     border-radius: 6px;
+    outline: none;
     
 }
 
@@ -52,6 +56,12 @@
 
 .login_container-form-input-submit{
     text-align: center;
+    margin-top: 40px;
+}
+
+
+.login_container-form-register > p > .register-link > a {
+    color:#303569 ;
 }
 
 .register-link{
@@ -60,4 +70,5 @@
     font-weight: 600;
     margin-bottom: 40px;
 }
+
 

@@ -1,0 +1,30 @@
+.carreras__container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.carreras__container-grid{
+   display: grid;
+
+   padding: 60px;
+   gap: 20px;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.carreas_container-item{
+background-color: #000;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.carreas_container-text{
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.carreas_container-item img{
+    width: 100%;
+    height: 100%;
+}

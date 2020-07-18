@@ -17,17 +17,17 @@
                     placeholder="Contraseña" required>
             </div>
 
-            <div class="login_container-form-input">
+            <!-- <div class="login_container-form-input">
                 <input name="userType" #userType="ngModel" [(ngModel)]="user.type" type="text"
                     placeholder="Tipo de usuario" required>
-            </div>
+            </div> -->
 
             <div class="login_container-form-login">
-                <span><a [routerLink]="['/login']">Ingresa!</a></span>
+                <span>¿Ya tienes cuenta? <br> <a [routerLink]="['/']">Inicia Sesion</a></span>
             </div>
 
             <div class="login_container-form-input-submit">
-                <input type="submit" value="Registrarme">
+                <input type="submit" value="Registrarme" [disabled]="!registerForm.valid">
             </div>
         </form>
     </div>

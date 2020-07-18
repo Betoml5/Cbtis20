@@ -7,7 +7,67 @@
 </div>
 
 <form #postForm="ngForm" (ngSubmit)="onSubmit(postForm)">
-    <div class="form_inputs">
+
+    <div class="form__container">
+
+        <div class="form__container-content">
+
+            <textarea placeholder="Contenido..." tabindex="1" name="content" #content="ngModel"
+            [(ngModel)]="post.content" required minlength="270"></textarea>
+
+        </div>
+
+        <div class="form__container-sidebar">
+            <div class="form__container-sidebar-container-input">
+
+                <div class="form__container-sidebar-container-input-item">
+                    <input type="text" placeholder="Titulo de post" [(ngModel)]="post.title" name="title" required>
+                </div>
+
+                
+                <div class="form__container-sidebar-container-input-item">
+                    <input type="text" placeholder="Autor" [(ngModel)]="post.author" #author="ngModel" name="author" required>
+                </div>
+
+
+                <div class="form__container-sidebar-container-input-item">
+                    <select 
+                    required
+                    class="select" 
+                    name="category" 
+                    #category="ngModel"
+                    [(ngModel)]="post.category"
+                     >
+                        <option value="" selected disabled>Categoria</option>
+                        <option value="General">General</option>
+                        <option value="Problemas de estudiantes">Problemas de estudiantes</option>
+                        <option value="Clases">Clases</option>
+                    </select>
+                </div>
+
+                <input tabindex="5" type="submit" value="Publicar" [disabled]="!postForm.form.valid">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="form_inputs">
         <div class="form_inputs-2">
             <div class="form_inputs-2-container">
                 <h2>Titulo de post</h2>
@@ -56,7 +116,7 @@
             </span>
         </div>
 
-    </div>
+    </div> -->
 
 
 </form>
