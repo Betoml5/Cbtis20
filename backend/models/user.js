@@ -6,7 +6,7 @@ const SALT_WORK_FACTOR = 10;
 const UserSchema = new Schema({
   userName: String,
   email: { type: String, unique: true, lowercase: true },
-  password: { type: String, select: false, required: true },
+  password: { type: String, required: true },
   type: String,
   // singupDate: { type: Date, default: Date.now() },
 });

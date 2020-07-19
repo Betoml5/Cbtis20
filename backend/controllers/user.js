@@ -39,29 +39,31 @@ const controller = {
   },
 
   login: async function (req, res) {
+    
     try {
-      const user = await User.findOne({
-        userName: req.body.userName,
-        password: req.body.password,
-      }).exec();
-
-      if (!user) {
-        return response
-          .status(400)
-          .send({ message: "El usuario no existe", status: "failed" });
+      const user = await User.findOne({ userName: req.body.userName }).exec();
+      if(!user) {
+          return res.status(400).send({ 
+            message: "The username does not exist",
+            state: 'failed'
+         });
       }
-
-      res.status(200).send({
-        message: "El usuario y la contraseña son correctos",
-        state: "success",
-        user: user,
+      user.comparePassword(req.body.password, (error, match) => {
+          if(!match) {
+              return res.status(400).send({ 
+                message: "The password is invalid",
+                status: 'failed'
+               });
+          }
       });
-    } catch (err) {
-      res.status(500).send({
-        message: "El usuario o contraseña son incorrectos",
-        state: "failed",
-      });
-    }
+      res.send({ 
+        message: "The username and password combination is correct!",
+        state: 'success'
+     });
+  } catch (error) {
+      response.status(500).send(error);
+  }
+        
   },
 
   getUser: async function (req, res) {
