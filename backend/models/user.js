@@ -8,7 +8,7 @@ const UserSchema = new Schema({
   email: { type: String, unique: true, lowercase: true },
   password: { type: String, required: true },
   type: String,
-  // singupDate: { type: Date, default: Date.now() },
+  image: String
 });
 
 UserSchema.pre('save', function(next) {

@@ -42,6 +42,8 @@
       Crear post</a
     >
     <a
+      *ngIf="userLocal" 
+      [routerLink]="['/user']"
       [routerLinkActive]="['actived']"
       [routerLinkActiveOptions]="{ exact: true }"
     >
@@ -50,5 +52,18 @@
       /></span>
       Cuenta</a
     >
+
+    <span class="icon menu" id="menu_logo" (click)="menuRes()">
+      <img src="../../../assets/static/menu.png" alt="">
+    </span>
+      
   </nav>
 </header>
+
+<div class="menu_colapsed" id="menu_colapsed">
+  <a> ITEM </a>
+  <a> ITEM </a>
+  <a> ITEM </a>
+  <a> ITEM </a>
+</div>
+

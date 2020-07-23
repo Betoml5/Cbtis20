@@ -13,9 +13,14 @@
 }
 
 .carreas_container-item{
-background-color: #000;
-border-radius: 10px;
-cursor: pointer;
+    background-color: #000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 300ms all ease;
+}
+
+.carreas_container-item:hover{
+    opacity: 0.6;
 }
 
 .carreas_container-text{

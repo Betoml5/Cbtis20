@@ -31,13 +31,15 @@ export class IniciarSesionComponent implements OnInit {
           localStorage.setItem("user", JSON.stringify(response.user));
           this.state = "success";
           form.reset();
-          this._router.navigate(["/"]);
+          console.log(response);
+          this._router.navigate(["/"]).then(() => {
+            location.reload();
+          })
         }
       },
       (error) => {
         console.error(error);
         this.state = "failed";
-
         form.reset();
       }
     );

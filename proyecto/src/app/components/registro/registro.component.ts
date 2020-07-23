@@ -17,7 +17,7 @@ export class RegistroComponent implements OnInit {
   public today: string = moment().format('D MMM YYYY h:mm:ss');
 
   constructor(private _userService: UserService) { 
-    this.user = new User("", "", "", "","", this.today);
+    this.user = new User("", "", "", "","","");
    }
 
   ngOnInit(): void {

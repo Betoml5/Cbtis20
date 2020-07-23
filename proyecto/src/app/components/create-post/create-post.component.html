@@ -1,8 +1,8 @@
 <div class="message success" *ngIf="status === 'success'">
-    El post se ha publicado correctamente <a [routerLink]="['/post', savePost._id]">Ver post</a>
+    El post se ha publicado correctamente. <a [routerLink]="['/post', savePost._id]"> Ver post</a>
 </div>
 
-<div *ngIf="status === 'failed'" class="message failed">
+<div class="message failed" *ngIf="status === 'failed'">
     El post no se ha podido publicar
 </div>
 
@@ -13,7 +13,7 @@
         <div class="form__container-content">
 
             <textarea placeholder="Contenido..." tabindex="1" name="content" #content="ngModel"
-            [(ngModel)]="post.content" required minlength="270"></textarea>
+            [(ngModel)]="post.content" minlength="270" required></textarea>
 
         </div>
 

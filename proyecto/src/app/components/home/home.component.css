@@ -19,3 +19,14 @@
    height: 100%;
    
 }
+
+@media (max-width: 375px){
+    .main_logo img{
+        display: none;
+    }
+
+    .header{
+        width: 146%;
+    }
+    
+}

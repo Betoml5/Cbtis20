@@ -5,7 +5,7 @@ export class User{
         public password: string,
         public type: string,
         public email: string,
-        public singupDay: any
+        public image: string,
     ) {}
 }
 

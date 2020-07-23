@@ -1,0 +1,50 @@
+
+.menu{
+    cursor: pointer;
+    display: none;
+    transition: 300ms all ease;
+  }
+
+.menu_colapsed{
+    display: none;
+}
+
+.menu_colapsed_active{
+    display: block;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;  
+    text-align: right;
+}
+
+.menuAnimation{
+    animation-name:menuAnimation;
+    animation-duration:1s;
+}
+
+@keyframes menuAnimation{
+    from{
+        transform:rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}
+  
+
+@media (max-width: 768px){
+    
+    .header .nav a {
+        display: none;
+    }
+
+    .header .nav .menu{
+        display: block;
+    }
+
+    .header .nav{
+        justify-content: flex-end;
+    }
+
+  }

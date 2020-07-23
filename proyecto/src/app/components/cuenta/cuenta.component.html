@@ -1,3 +1,21 @@
 <div class="user_container">
-    <p>Hola! {{userLocal.userName}}</p>
+
+   <div class="user_container-info">
+
+      <div class="user_container-info-img">
+         <img src="{{url+'get-image/'+userLocal.image}}" alt="UserImage">
+         <div class="user_container-info-img-description">
+         </div>
+      </div>
+      
+      <div class="user_container-info-userName">
+         <form #imageForm="ngForm" (ngSubmit)="onSubmit(imageForm)">
+            <label for="img">seleccionar imagen</label>
+            <input type="file" id="img" name="img" (change)="fileChangeEvent($event)">
+            <input id="btnSubmit" type="submit" value="CAMBIAR" [disabled]="!imageForm.form.valid">
+         </form>
+         <button *ngIf="userLocal" class="user_container-btn-logout" (click)="logout()"> Cerrar sesión</button>
+      </div>
+   </div>
+   <app-iniciar-sesion *ngIf="!userLocal"></app-iniciar-sesion>
 </div>
