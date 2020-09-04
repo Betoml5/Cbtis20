@@ -11,22 +11,16 @@
 }
 
 .main_logo img{
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 395px;
+    border-radius: 8px;
+    margin-right: 10px;
 }
 
-.login-container-form {
-   height: 100%;
-   
-}
 
-@media (max-width: 375px){
+@media (max-width: 365px){
     .main_logo img{
         display: none;
     }
 
-    .header{
-        width: 146%;
-    }
-    
 }

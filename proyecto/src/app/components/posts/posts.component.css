@@ -67,19 +67,32 @@ button:hover{
 
 @media (max-width: 375px){
     .posts-container{
-        grid-template-columns: 1fr ;
+        grid-template-columns: 100% ;
     }   
+
+    .post{
+        grid-column: 1/1;
+    }
 }
 
-@media (max-width: 1440px){  
+@media (max-width: 756px){
     .posts-container{
-      grid-template-columns: repeat(2, 465px);
+        grid-template-columns: 100%;
     }
+    .post{
+        grid-column: 1/1;
+    }
+}
 
-    .post-container-title{
-        width: 92%;
-    }
-  }
+    /* @media (max-width: 1440px){  
+        .posts-container{
+        grid-template-columns: repeat(2, 465px);
+        }
+
+        .post-container-title{
+            width: 92%;
+        }
+    } */
 
 @media (max-width: 1750px){
     .post-container-title{

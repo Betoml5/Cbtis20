@@ -13,6 +13,7 @@ import * as moment from 'moment';
 export class CreatePostComponent implements OnInit {
   // tslint:disable-next-line: variable-name
   public title_post: string;
+  public userLocal;
   public post: Post;
   public savePost;
   public status: string;
@@ -23,7 +24,7 @@ export class CreatePostComponent implements OnInit {
     // Siempre tienes que cargar los servicios en el constructor
     private _postService: PostService
   ) {
-
+    this.userLocal = localStorage.getItem('user');
     this.title_post = 'SUBIR POST';
     this.post = new Post('', '', '', this.today, '', '');
   }

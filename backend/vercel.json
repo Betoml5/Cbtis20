@@ -1,0 +1,16 @@
+{
+    "name": "cbtis20",
+    "version": 2,
+    "builds": [{
+       "src": "index.js", "use": "@vercel/node" 
+    }],
+    "routes": [{
+        "src": "/(.*)", "dest": "/index.js"
+    }],
+    "env": {
+        "DB_USER": "@cbtis-db-user",
+        "DB_PASSWORD": "@cbtis-db-password",
+        "DB_HOST": "@cbtis-db-host",
+        "DB_NAME": "@cbtis-db-name"
+    }
+}

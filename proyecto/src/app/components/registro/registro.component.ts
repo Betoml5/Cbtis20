@@ -17,7 +17,7 @@ export class RegistroComponent implements OnInit {
   public today: string = moment().format('D MMM YYYY h:mm:ss');
 
   constructor(private _userService: UserService) { 
-    this.user = new User("", "", "", "","","");
+    this.user = new User("", "", "", "","");
    }
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class RegistroComponent implements OnInit {
         this.saveUser = response.user;
         form.reset();
         Swal.fire({
-          title: "Regitrado!",
+          title: "Registrádo!",
           text: "Usuario creado correctamente",
           icon: "success",
           confirmButtonText: "Cool",

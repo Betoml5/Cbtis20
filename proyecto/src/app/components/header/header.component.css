@@ -10,12 +10,20 @@
 }
 
 .menu_colapsed_active{
-    display: block;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     justify-content: center;
     align-items: center;
     padding: 20px;  
     text-align: right;
+
+    border-radius: 0px 0px 8px 8px;
+}
+
+.menu_colapsed_active a{
+    margin-bottom: 10px;
+    color: #000;
 }
 
 .menuAnimation{

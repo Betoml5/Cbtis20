@@ -101,6 +101,7 @@
 
 .btnChange{
     animation:btnAnimationChange 1s infinite;
+    transition: 300ms all ease;
 }
 
 @keyframes btnAnimationChange{

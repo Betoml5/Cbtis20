@@ -1,3 +1,3 @@
 export const Global = {
-    url: 'http://localhost:3700/api/'
+    url: 'https://cbtis20.vercel.app/api/'
 };

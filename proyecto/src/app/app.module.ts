@@ -37,7 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
     CuentaComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, routing, FormsModule, HttpClientModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), routing, FormsModule, HttpClientModule],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent],
 })

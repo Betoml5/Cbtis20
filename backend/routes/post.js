@@ -1,4 +1,4 @@
-
+l
 
 const express = require('express');
 const PostController = require('../controllers/post')
@@ -20,6 +20,7 @@ const multipartMiddleware = multipart({ uploadDir: './uploads' })
     router.get('/user/:id?', UserController.getUser);
     router.post('/upload-image/:id', multipartMiddleware, UserController.uploadImage)
     router.get('/get-image/:image', UserController.getImageFile);
+    router.get('/getUsers', UserController.getUsers);
 
 
  module.exports = router;

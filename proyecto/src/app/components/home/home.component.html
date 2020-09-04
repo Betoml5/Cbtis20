@@ -4,7 +4,9 @@
 
         <div *ngIf="!userLocal" class="main_logo">
             <img src="../../../assets/static/cbtis-logo.jpg" alt="CbtisLogo">
-            <app-iniciar-sesion  class="login-container"></app-iniciar-sesion>
+            <div class="login-container">
+                <app-iniciar-sesion></app-iniciar-sesion>
+            </div>
         </div>
 
         <div class="title">

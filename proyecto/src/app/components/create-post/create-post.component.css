@@ -98,3 +98,29 @@
     height: 50px;
 }
 
+
+
+@media (max-width: 360px){
+    .form__container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__container-content{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .form__container-content textarea {
+        padding: 20px;
+    }
+
+    .form__container-sidebar{
+        width: 100%;
+    }
+
+    .form__container-sidebar-container-input-item{
+        margin-bottom: 15px;
+    }
+}

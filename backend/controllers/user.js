@@ -10,7 +10,6 @@ const controller = {
       message: "Soy el metodo test",
     });
   },
-
   createUser: async function (req, res) {
     try {
       const user = new User();
@@ -18,7 +17,6 @@ const controller = {
       user.userName = params.userName;
       user.password = params.password;
       user.email = params.email;
-      user.type = params.type;
       user.image = null;
 
       user.save((err, userSaved) => {
@@ -55,7 +53,7 @@ const controller = {
           if(!match) {
               return res.status(400).send({ 
                 message: "The password is invalid",
-                status: 'failed'
+                state: 'failed'
                });
           }
       });
@@ -93,6 +91,20 @@ const controller = {
     }
   },
 
+  getUsers: async function(req, res){
+    try{
+      User.find({}).exec( (err, users) => {
+        if (err) {
+          return res.status(500).send({ message: 'Error al devolver los datos'});
+        }
+        return res.status(200).send({ users })
+      })
+    }
+    catch(err){
+
+    }
+
+  },
   uploadImage: async function(req, res){
     var userId = req.params.id;
     var fileName = "Imagen no subida...";

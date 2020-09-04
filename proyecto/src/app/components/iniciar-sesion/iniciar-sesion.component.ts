@@ -1,9 +1,8 @@
 import { Component, OnInit, Output } from "@angular/core";
 import { User } from "../../models/userTypes";
 import { UserService } from "../../services/user.service";
-import * as moment from "moment";
 import { Router } from "@angular/router";
-
+import Swal from "sweetalert2";
 
 @Component({
   selector: "app-iniciar-sesion",
@@ -12,14 +11,14 @@ import { Router } from "@angular/router";
 })
 export class IniciarSesionComponent implements OnInit {
 
-  @Output() style;
 
   public user: User;
   public state: string;
   public userLocal: any;
 
   constructor(private _userService: UserService, private _router: Router) {
-    this.user = new User("", "", "", "", "", "");
+    this.user = new User("", "", "", "", "");
+     
   }
 
   ngOnInit() {}
@@ -38,8 +37,13 @@ export class IniciarSesionComponent implements OnInit {
         }
       },
       (error) => {
-        console.error(error);
-        this.state = "failed";
+        Swal.fire({
+          title: "Error!",
+          text: "No se ha podido autenticar el usuario",
+          icon: "error",
+          confirmButtonText: "Intentarlo de nuevo",
+        });
+        console.log(error);
         form.reset();
       }
     );
